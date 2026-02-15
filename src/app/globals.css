@@ -38,7 +38,7 @@ html {
 body {
     background: var(--background);
     color: var(--text);
-    font-family: 'Inter';
+    font-family: 'Outfit';
 }
 
 .text-link {
@@ -52,9 +52,16 @@ body {
 }
 
 .input-authcredentials {
-    border-color: var(--foreground);
-    border: 4px;
+    border: 2px solid var(--middleground);
     border-radius: 0.5rem;
+    padding: 4px 12px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-authcredentials:focus {
+    background: var(--foreground);
+    transition: all 0.3s ease-in-out;
 }
 
 .transition-normal {
