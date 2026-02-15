@@ -1,4 +1,5 @@
 import { SignJWT, jwtVerify } from "jose"
+import crypto from "crypto"
 
 const JWT_SECRET = new TextEncoder().encode(
     process.env.JWT_SECRET
@@ -23,7 +24,20 @@ export async function signToken(payload: JWTPayload): Promise<string> {
 export async function verifyToken(token: string): Promise<JWTPayload | null> {
     try {
         const { payload } = await jwtVerify(token, JWT_SECRET)
-        return payload as JWTPayload
+
+        if (
+            typeof payload.userId === "string" &&
+            typeof payload.email === "string" &&
+            typeof payload.sessionId === "string"
+        ) {
+            return {
+                userId: payload.userId,
+                email: payload.email,
+                sessionId: payload.sessionId,
+            }
+        }
+
+        return null
     } catch (error) {
         console.error("Token verification failed:", error)
         return null
