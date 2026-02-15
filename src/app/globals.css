@@ -9,6 +9,8 @@
     --main: #FF8205;
     --text: #FFFFFF;
     --subtext: #AAAAAA;
+    --textlink: #8F79FF;
+    --textlink-hover: #866EFF;
 }
 
 /* scrollbar-in */
@@ -37,6 +39,22 @@ body {
     background: var(--background);
     color: var(--text);
     font-family: 'Inter';
+}
+
+.text-link {
+    color: var(--textlink);
+    transition: all 0.3s ease-in-out;
+}
+
+.text-link:hover {
+    color: var(--textlink-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+.input-authcredentials {
+    border-color: var(--foreground);
+    border: 4px;
+    border-radius: 0.5rem;
 }
 
 .transition-normal {
