@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="pt-br">
-            <body className={`${outfit.className}`}>
+            <body className={`size-full ${outfit.className}`}>
                 <AuthContext>
                     <TranslationContext>
                         {children}

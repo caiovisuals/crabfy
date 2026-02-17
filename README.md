@@ -7,8 +7,9 @@ Crabfy é uma plataforma educacional criada para tornar o aprendizado de lógica
 O Crabfy nasceu com um propósito claro:
 - Transformar aprendizado em jogo
 - Ensinar lógica antes de linguagem
-- Ser acessível e gratuito para qualquer estudante
+- Ser acessível e gratuito para qualquer estudante de qualquer lugar do mundo
 - Evoluir junto com o aluno
+- Trazer sempre os melhores e mais atualizados conteúdos
 
 Acreditamos que lógica de programação é a base de qualquer linguagem, e quando ensinada de forma divertida, o aprendizado se torna natural.
 

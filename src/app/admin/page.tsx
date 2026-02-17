@@ -1,5 +1,7 @@
 export default function Admin() {
     return (
-        <div></div>
+        <div className="size-full">
+            
+        </div>
     )
 }

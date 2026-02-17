@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { signIn } from "next-auth/react"
 import HeaderMain from "@/_components/layout/HeaderMain"
 
 export default function Login() {
@@ -67,11 +68,11 @@ export default function Login() {
             }
 
             setSuccess(data.message)
+            router.push("/home")
         } catch (err) {
             setError("Erro inesperado. Tente novamente.")
         } finally {
             setLoading(false)
-            router.push("/home")
         }
     }
 
@@ -81,6 +82,17 @@ export default function Login() {
             <div className="flex flex-col gap-6 items-center justify-center w-full h-[calc(100vh-10rem)]">
                 <h1 className="text-3xl">Fazer Login</h1>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+                    <div className="flex flex-row gap-5">
+                        <div onClick={() => signIn("github", { callbackUrl: "/home" })} className="w-[50%] flex flex-row items-center justify-center gap-2 bg-[#151515] hover:bg-[#202020] border-2 border-[#232323] p-4 rounded-xl transition-normal cursor-pointer">
+                            <img src="/auth-opitons/github.png" alt="GitHub" className="size-5" loading="lazy" draggable="false" />
+                            <span>GitHub</span>
+                        </div>
+                        <div onClick={() => signIn("google", { callbackUrl: "/home" })} className="w-[50%] flex flex-row items-center justify-center gap-2 bg-[#151515] hover:bg-[#202020] border-2 border-[#232323] p-4 rounded-xl transition-normal cursor-pointer">
+                            <img src="/auth-opitons/google.png" alt="Google" className="size-5" loading="lazy" draggable="false" />
+                            <span>Google</span>
+                        </div>
+                    </div>
+                    <div className="w-full h-0.5 bg-[var(--middleground)] my-3"/>
                     <div className="flex flex-col gap-1">
                         <label>Email ou Nome de Usuário</label>
                         <input name="name" value={form.emailOrUsername} onChange={handleChange} type="text" className="input-authcredentials"></input>
@@ -88,7 +100,7 @@ export default function Login() {
                     <div className="flex flex-col gap-1 relative">
                         <label>Senha</label>
                         <input name="password" value={form.password} onChange={handleChange} type={showPassword ? "text" : "password"} className="input-authcredentials"></input>
-                        <button type="button"onClick={() => setShowPassword(!showPassword)} className="absolute right-2.5 top-9 flex items-center justify-center bg-transparent outline-none" tabIndex={-1}>
+                        <button type="button"onClick={() => setShowPassword(!showPassword)} className="absolute group right-2.5 top-9 flex items-center justify-center bg-transparent outline-none" tabIndex={-1}>
                             <svg
                                 viewBox="0 0 24 24"
                                 width={20}
@@ -98,6 +110,7 @@ export default function Login() {
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
+                                className="group-hover:scale-[1.05] transition-fast"
                             >
                                 {showPasswordIcon()}
                             </svg>

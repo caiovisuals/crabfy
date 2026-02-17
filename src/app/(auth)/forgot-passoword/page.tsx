@@ -45,11 +45,11 @@ export default function ForgotPassoword() {
             }
 
             setSuccess(data.message)
+            router.push("/login")
         } catch (err) {
             setError("Erro inesperado. Tente novamente.")
         } finally {
             setLoading(false)
-            router.push("/login")
         }
     }
 

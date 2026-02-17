@@ -24,7 +24,7 @@ export default function LandingPage() {
             <section id=""></section>
             <section id=""></section>
             <section id=""></section>
-            <section id="faq" className="flex flex-col items-center justify-center">
+            <section id="faq" className="w-full bg-[var(--foreground)] flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-3xl font-semibold">Perguntas frequentes</h2>
                     <h3 className="text-center text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reprehenderit magni optio.</h3>

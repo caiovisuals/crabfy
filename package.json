@@ -10,6 +10,7 @@
     "generate": "npx prisma generate"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.15.0",
     "@prisma/client": "^7.4.0",
     "bcrypt": "^6.0.0",
     "ioredis": "^5.9.3",
