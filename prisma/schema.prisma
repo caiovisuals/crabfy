@@ -32,6 +32,7 @@ model User {
     level         Int      @default(1)
 
     visibility    Visibility @default(PUBLIC)
+    language      Language  @default(PORTUGUESE)
 
     sessions      Session[]
 
@@ -64,4 +65,9 @@ enum Role {
 enum Visibility {
     PUBLIC
     PRIVATE
+}
+
+enum Language {
+    PORTUGUESE
+    ENGLISH
 }

@@ -30,6 +30,9 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
         const fetchLanguage = async () => {
             try {
                 const res = await fetch("/api/users/settings/language")
+                if (res.status === 401) {
+                    return
+                }
                 if (!res.ok) {
                     const data = await res.json()
 
