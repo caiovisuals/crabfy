@@ -1,6 +1,6 @@
 # CRABFY
 
-Crabfy é uma plataforma educacional criada para tornar o aprendizado de lógica de programação simples, divertido e acessível. Através de desafios interativos, sistema de níveis e progressão gamificada, qualquer pessoa pode aprender a programar do zero.
+Crabfy é uma plataforma educacional criada para tornar o aprendizado de lógica de programação simples, divertido, acessível e de forma open-source. Através de desafios interativos, sistema de níveis e progressão gamificada, qualquer pessoa pode aprender a programar do zero.
 
 ## Sobre o Projeto
 

@@ -5,7 +5,7 @@ export default function LandingPage() {
     return (
         <div className="flex flex-col size-full items-center">
             <HeaderMain/>
-            <section id="hero" className="flex flex-col items-center justify-center w-full h-[calc(100vh-10rem)]">
+            <section id="hero" className="px-4 py-8 flex flex-col items-center justify-center w-full h-[calc(100vh-10rem)]">
                 <div className="flex flex-col items-center justify-center gap-5">
                     <div className="flex flex-row gap-2 py-2 px-4 border-2 border-[var(--middleground)] hover:bg-[var(--foreground)] rounded-full w-fit transition-normal">
                         <div className="flex flex-row">
@@ -21,10 +21,10 @@ export default function LandingPage() {
                     </div>
                 </div>
             </section>
-            <section id=""></section>
-            <section id=""></section>
-            <section id=""></section>
-            <section id="faq" className="w-full bg-[var(--foreground)] flex flex-col items-center justify-center">
+            <section id="" className="w-full px-4 sm:px-6 md:px-12 lg:px-24 py-8 sm:py-12 md:py-16"></section>
+            <section id="" className="w-full px-4 sm:px-6 md:px-12 lg:px-24 py-8 sm:py-12 md:py-16"></section>
+            <section id="" className="w-full px-4 sm:px-6 md:px-12 lg:px-24 py-8 sm:py-12 md:py-16"></section>
+            <section id="faq" className="w-full px-4 sm:px-6 md:px-12 lg:px-24 py-8 sm:py-12 md:py-16 flex flex-col items-center justify-center bg-[var(--foreground)]">
                 <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-3xl font-semibold">Perguntas frequentes</h2>
                     <h3 className="text-center text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reprehenderit magni optio.</h3>

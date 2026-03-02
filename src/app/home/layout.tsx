@@ -1,5 +1,6 @@
 import HeaderHome from "@/_components/layout/HeaderHome"
 import SidebarHome from "@/_components/layout/SidebarHome"
+import SidebarHomeMobile from "@/_components/layout/SidebarHomeMobile"
 
 export default function HomeLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
@@ -9,6 +10,7 @@ export default function HomeLayout({ children }: Readonly<{ children: React.Reac
                 <SidebarHome/>
                 {children}
             </div>
+            <SidebarHomeMobile/>
         </div>
     )
 }

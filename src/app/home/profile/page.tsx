@@ -5,7 +5,14 @@ import { useUser } from "@/_hooks/useUser"
 
 export default function Profile() {
     const { user, loading } = useUser()
-    const [ isEditing, setIsEditing ] = useState(false)
+    const [isEditing, setIsEditing] = useState(false)
+    const [name, setName] = useState("")
+    const [hasChanged, setHasChanged] = useState(false)
+
+    const handleSave = () => {        
+        setIsEditing(false)
+        setHasChanged(false)
+    }
 
     if (loading) {
         return (
@@ -37,9 +44,15 @@ export default function Profile() {
                         <span className="text-lg leading-tight">@{user?.username || "nome-de-usuario"}</span>
                     </div>
                 </div>
-                <button onClick={() => setIsEditing(true)} className="px-4 py-2 flex flex-row items-center justify-center gap-2.5 bg-[var(--foreground)] hover:bg-[var(--middleground)] rounded-xl transition-normal cursor-pointer">
-                    Editar Perfil
-                </button>
+                {!isEditing ? (
+                    <button onClick={() => setIsEditing(true)} className="px-4 py-2 flex flex-row items-center justify-center gap-2.5 bg-[var(--foreground)] hover:bg-[var(--middleground)] rounded-xl transition-normal cursor-pointer">
+                        Editar Perfil
+                    </button>
+                ) : (
+                    <button onClick={handleSave} className="px-4 py-2 flex flex-row items-center justify-center gap-2.5 bg-[var(--foreground)] hover:bg-[var(--middleground)] rounded-xl transition-normal cursor-pointer">
+                        Salvar
+                    </button>
+                )}
             </div>
         </div>
     )
